@@ -21,22 +21,22 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 
 ## Decisions locked in
 
-- Standalone `books.html` page (not just a section on the main consulting site), since the current site would get long as titles grow
+- Standalone page (not just a section on the main consulting site), since the current site would get long as titles grow; lives as `index.html` at the repo root so it's what loads at `books.britleyhoffconsulting.com` directly
 - Launch with individual book listings only, no bundle offer yet, that gets added later once a bundle product exists in Gumroad
 - Cover art is supplied manually (from existing Apple Books listings or new art), no placeholder-image system
 - Future books get added via a simple per-book intake file (`books/<slug>.yaml` + cover image) that gets reviewed and folded into the published page, rather than hand-editing markup for every new title
-- This lives in its own repo (`books`), not inside `wren-creator.github.io`. How it connects to britleyhoffconsulting.com (subdomain, path, or just a link-out) is still undecided
+- This lives in its own repo (`books`), not inside `wren-creator.github.io`, connected via subdomain (see Next actions). Note: `wren-creator/books` on GitHub was already taken by an older private repo of manuscript drafts/cover art, that got renamed to `wren-creator/book-manuscripts` to free up the name for this repo
 
 ## Next actions
 
 - [x] Create Gumroad account
 - [x] Verify a payout method (bank or PayPal)
 - [x] Post first book(s) as Gumroad products — *LLMOps Infrastructure for the Generative Era* live at https://britley.gumroad.com/l/LLMOps
-- [x] Build `books.html` + `data/books.js` + `.book-grid`/`.book-card` styling — one book live, intake file at `books/llmops-infrastructure.yaml`, cover pulled from the Gumroad listing into `assets/books/`
+- [x] Build `index.html` + `data/books.js` + `.book-grid`/`.book-card` styling — one book live, intake file at `books/llmops-infrastructure.yaml`, cover pulled from the Gumroad listing into `assets/books/`
 - [x] Decide how this repo connects to britleyhoffconsulting.com — **subdomain**: `books.britleyhoffconsulting.com`
+- [x] Enable GitHub Pages on `wren-creator/books` (source: `main`, root)
+- [x] Add a DNS `CNAME` record at GoDaddy: `books` → `wren-creator.github.io` — live
 - [ ] Wire a link from `wren-creator.github.io`'s homepage Publications section over to this page
-- [ ] Enable GitHub Pages on `wren-creator/books` (source: `main`, root)
-- [ ] Add a DNS `CNAME` record at the domain registrar/DNS provider: `books` → `wren-creator.github.io` (this is the one step only the account owner can do, not scriptable from here)
 
 ## Later / not yet scoped
 
