@@ -33,9 +33,10 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 - [x] Verify a payout method (bank or PayPal)
 - [x] Post first book(s) as Gumroad products — *LLMOps Infrastructure for the Generative Era* live at https://britley.gumroad.com/l/LLMOps
 - [x] Build `books.html` + `data/books.js` + `.book-grid`/`.book-card` styling — one book live, intake file at `books/llmops-infrastructure.yaml`, cover pulled from the Gumroad listing into `assets/books/`
-- [ ] Decide how this repo connects to britleyhoffconsulting.com (subdomain vs. path vs. link-out)
+- [x] Decide how this repo connects to britleyhoffconsulting.com — **subdomain**: `books.britleyhoffconsulting.com`
 - [ ] Wire a link from `wren-creator.github.io`'s homepage Publications section over to this page
-- [ ] Decide hosting for this repo itself (GitHub Pages, same as `wren-creator.github.io`?) so `books.html` is actually reachable at a URL
+- [ ] Enable GitHub Pages on `wren-creator/books` (source: `main`, root)
+- [ ] Add a DNS `CNAME` record at the domain registrar/DNS provider: `books` → `wren-creator.github.io` (this is the one step only the account owner can do, not scriptable from here)
 
 ## Later / not yet scoped
 
