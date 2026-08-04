@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Books — Britley Hoff</title>
+<meta name="description" content="Books on private, auditable AI infrastructure by Britley Hoff. Direct sales via Gumroad.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero-lite">
+  <div class="wrap">
+    <div class="session-tag">LU0 — WREN-CREATOR · BOOKS</div>
+    <h1>BOOKS</h1>
+    <p class="tagline">Private, auditable AI infrastructure, written for the people who have to build and run it.</p>
+    <a class="back" href="https://britleyhoffconsulting.com">&larr; Back to britleyhoffconsulting.com</a>
+  </div>
+</header>
+
+<section id="books">
+  <div class="wrap">
+    <p class="eyebrow">Catalog</p>
+    <div class="book-grid" id="book-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="status-line">
+    <div>
+      <a href="mailto:britleyhoff@britleyhoffconsulting.com">britleyhoff@britleyhoffconsulting.com</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/wren-creator">github.com/wren-creator</a>
+      <span class="sep">·</span>
+      <a href="https://linkedin.com/in/britley-h-2a429811">linkedin.com/in/britley-h-2a429811</a>
+    </div>
+    <div><span class="status-ready">SESSION READY</span></div>
+  </div>
+</footer>
+
+<script src="data/books.js"></script>
+<script>
+  const grid = document.getElementById('book-grid');
+  BOOKS.forEach((book) => {
+    const card = document.createElement('div');
+    card.className = 'book-card';
+    card.innerHTML = `
+      <img class="cover" src="${book.cover}" alt="${book.title} cover">
+      <h2>${book.title}</h2>
+      <p class="summary">${book.summary}</p>
+      <div class="meta">
+        <span class="price">${book.price}</span>
+        <div class="formats">${book.formats.map(f => `<span>${f}</span>`).join('')}</div>
+      </div>
+      <a class="btn" href="${book.gumroadUrl}" target="_blank" rel="noopener">Buy on Gumroad &rarr;</a>
+    `;
+    grid.appendChild(card);
+  });
+</script>
+
+</body>
+</html>

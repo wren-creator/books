@@ -1,0 +1,228 @@
+/* Books, direct-sales page. Same terminal-session identity as
+   britleyhoffconsulting.com (dark = CRT default, light = paper). */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #1a0a12;
+  --ink-2: #241019;
+  --ink-3: #341824;
+  --wine: #993556;
+  --rose: #d4537e;
+  --rose-pale: #f4c0d1;
+  --paper: #f5efe9;
+  --paper-2: #ece0d7;
+  --paper-3: #ddccc0;
+  --ink-soft: #4a2430;
+
+  --bg: var(--ink);
+  --bg-panel: var(--ink-2);
+  --bg-panel-2: var(--ink-3);
+  --border: #55293a;
+  --text: #f3e3e9;
+  --text-dim: #c79aa8;
+  --accent: var(--rose);
+  --accent-soft: var(--rose-pale);
+
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: var(--paper);
+    --bg-panel: #ffffff;
+    --bg-panel-2: var(--paper-2);
+    --border: var(--paper-3);
+    --text: var(--ink-soft);
+    --text-dim: #8a5c68;
+    --accent: var(--wine);
+    --accent-soft: var(--wine);
+    color-scheme: light;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- eyebrow / field labels ---------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0 0 1.25rem;
+}
+.eyebrow::before { content: '>>'; opacity: 0.7; }
+
+/* ---------- slim header ---------- */
+.hero-lite {
+  border-bottom: 1px solid var(--border);
+  padding: 3.5rem 0 3rem;
+}
+.hero-lite .session-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+.hero-lite h1 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+.hero-lite .tagline {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  max-width: 52ch;
+  color: var(--text-dim);
+  margin: 0;
+}
+.hero-lite .back {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 0.8em 1.3em;
+  border: 1px solid var(--accent);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: transparent; color: var(--accent); }
+
+/* ---------- sections ---------- */
+section { padding: 4rem 0 5rem; }
+
+/* ---------- book grid ---------- */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 760px) {
+  .book-grid { grid-template-columns: 1fr; }
+}
+
+.book-card {
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book-card .cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--bg-panel-2);
+}
+
+.book-card h2 {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.book-card .summary {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+.book-card .meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.book-card .price {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.book-card .formats {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.book-card .formats span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--border);
+  padding: 0.25em 0.6em;
+  color: var(--text-dim);
+}
+
+.book-card .btn { align-self: flex-start; }
+
+/* ---------- status-line footer ---------- */
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-panel);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.status-line a { color: var(--text-dim); }
+.status-line a:hover { color: var(--accent); }
+.status-line .sep { opacity: 0.4; margin: 0 0.5em; }
+.status-ready { color: var(--accent); }
