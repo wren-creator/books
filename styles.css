@@ -154,7 +154,7 @@ section { padding: 4rem 0 5rem; }
 
 .book-card .cover {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   border: 1px solid var(--border);
   background: var(--bg-panel-2);

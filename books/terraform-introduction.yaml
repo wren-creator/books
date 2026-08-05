@@ -1,0 +1,6 @@
+title: "A Beginner's Introduction to Terraform"
+summary: "A hands-on, safety-first roadmap to Terraform and Infrastructure as Code, built for sysadmins and developers who want to skip the surprise cloud bill. Covers the Write-Plan-Apply workflow, a $1 billing-alarm safety net, and a path from beginner to advanced cloud engineer."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/Terraform_introduction"
+cover: "terraform-introduction.jpg"
