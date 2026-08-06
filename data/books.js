@@ -1,5 +1,13 @@
 const BOOKS = [
   {
+    title: "WebTerm/3270: The Nuts and Bolts Guide to a Browser-Based Mainframe Terminal",
+    summary: "A no-plugin, browser-based 3270 terminal that doubles as a full protocol-level security toolkit, live traffic interception, RACF and DB2 reconnaissance, field-level attribute analysis, and a mock LPAR fleet for training without touching a real mainframe.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/webterm-3270",
+    cover: "assets/books/webterm-3270.jpg",
+  },
+  {
     title: "The Big Red Book of AI on IBM Mainframe",
     summary: "A field guide to running AI inside the mainframe's own walls, Telum on-chip inference, vLLM and pgvector on OpenShift on Z, RACF-governed AI agents, and GDPS-aware disaster recovery. Written for the systems programmers and architects who already keep the world's most reliable platform running, and are about to be asked to make it think.",
     price: "$1.99",
