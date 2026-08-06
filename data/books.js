@@ -1,5 +1,13 @@
 const BOOKS = [
   {
+    title: "The Big Red Book of AI on IBM Mainframe",
+    summary: "A field guide to running AI inside the mainframe's own walls, Telum on-chip inference, vLLM and pgvector on OpenShift on Z, RACF-governed AI agents, and GDPS-aware disaster recovery. Written for the systems programmers and architects who already keep the world's most reliable platform running, and are about to be asked to make it think.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/big-red-book",
+    cover: "assets/books/big-red-book.jpg",
+  },
+  {
     title: "LLMOps Infrastructure for the Generative Era",
     summary: "The infrastructure behind the AI model, Terraform patterns for building the pipes that turn a language model into a system with memory, context, and the ability to safely act. For anyone ready to move from Prompt Engineer to Architect of Intelligence.",
     price: "$1.99",

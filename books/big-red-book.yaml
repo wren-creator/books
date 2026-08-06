@@ -1,0 +1,6 @@
+title: "The Big Red Book of AI on IBM Mainframe"
+summary: "A field guide to running AI inside the mainframe's own walls, Telum on-chip inference, vLLM and pgvector on OpenShift on Z, RACF-governed AI agents, and GDPS-aware disaster recovery. Written for the systems programmers and architects who already keep the world's most reliable platform running, and are about to be asked to make it think."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/big-red-book"
+cover: "big-red-book.jpg"
