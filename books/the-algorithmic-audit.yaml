@@ -1,0 +1,6 @@
+title: "The Algorithmic Audit: Compliance in a Probabilistic World"
+summary: "A compliance field guide for auditors and architects stuck mapping deterministic controls onto a probabilistic AI system, PII sitting in model weights, STIG-style hardening for AI, and the real gap between what a compliance framework assumes and what a model actually does. Includes technical annexes on the privacy math and explainability tools like LIME and SHAP auditors are increasingly expected to understand."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/audit"
+cover: "the-algorithmic-audit.jpg"

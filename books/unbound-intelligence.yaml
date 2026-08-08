@@ -1,0 +1,6 @@
+title: "Unbound Intelligence: A Sovereign Cluster Playbook"
+summary: "A hands-on playbook for building a real multi-node AI cluster you own outright, wiring the physical layer, sharding a large model across machines with Exo, tuning RDMA and RoCE v2 on the Linux backplane, and auditing the result end to end. Bonus chapters cover a sovereign retrieval layer, the GhostDrift protocol, and a look at where decentralized AI goes from here."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/unbound"
+cover: "unbound-intelligence.jpg"

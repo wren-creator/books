@@ -1,5 +1,29 @@
 const BOOKS = [
   {
+    title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
+    summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/Sovereignty",
+    cover: "assets/books/silicon-sovereignty.jpg",
+  },
+  {
+    title: "The Algorithmic Audit: Compliance in a Probabilistic World",
+    summary: "A compliance field guide for auditors and architects stuck mapping deterministic controls onto a probabilistic AI system, PII sitting in model weights, STIG-style hardening for AI, and the real gap between what a compliance framework assumes and what a model actually does. Includes technical annexes on the privacy math and explainability tools like LIME and SHAP auditors are increasingly expected to understand.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/audit",
+    cover: "assets/books/the-algorithmic-audit.jpg",
+  },
+  {
+    title: "Unbound Intelligence: A Sovereign Cluster Playbook",
+    summary: "A hands-on playbook for building a real multi-node AI cluster you own outright, wiring the physical layer, sharding a large model across machines with Exo, tuning RDMA and RoCE v2 on the Linux backplane, and auditing the result end to end. Bonus chapters cover a sovereign retrieval layer, the GhostDrift protocol, and a look at where decentralized AI goes from here.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/unbound",
+    cover: "assets/books/unbound-intelligence.jpg",
+  },
+  {
     title: "TN3270 Uncovered: The Protocol, the Handshake, and a Library Built to Keep the Legacy Alive",
     summary: "TN3270 isn't legacy in the dismissive sense, it's still moving real transactions through banks, insurers, and governments today. This book covers the protocol's history, a byte-by-byte walkthrough of the TN3270E handshake and data stream with diagrams, and the zero-dependency Node.js library built from that research, plus a real chapter on its AS/400 cousin, TN5250.",
     price: "$1.99",

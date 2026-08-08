@@ -1,0 +1,6 @@
+title: "Silicon Sovereignty: Orchestrating Private AI at the Edge"
+summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/Sovereignty"
+cover: "silicon-sovereignty.jpg"
