@@ -1,0 +1,6 @@
+title: "TN3270 Uncovered: The Protocol, the Handshake, and a Library Built to Keep the Legacy Alive"
+summary: "TN3270 isn't legacy in the dismissive sense, it's still moving real transactions through banks, insurers, and governments today. This book covers the protocol's history, a byte-by-byte walkthrough of the TN3270E handshake and data stream with diagrams, and the zero-dependency Node.js library built from that research, plus a real chapter on its AS/400 cousin, TN5250."
+price: "$1.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/lsjup"
+cover: "tn3270-uncovered.jpg"

@@ -1,5 +1,13 @@
 const BOOKS = [
   {
+    title: "TN3270 Uncovered: The Protocol, the Handshake, and a Library Built to Keep the Legacy Alive",
+    summary: "TN3270 isn't legacy in the dismissive sense, it's still moving real transactions through banks, insurers, and governments today. This book covers the protocol's history, a byte-by-byte walkthrough of the TN3270E handshake and data stream with diagrams, and the zero-dependency Node.js library built from that research, plus a real chapter on its AS/400 cousin, TN5250.",
+    price: "$1.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/lsjup",
+    cover: "assets/books/tn3270-uncovered.jpg",
+  },
+  {
     title: "WebTerm/3270: The Nuts and Bolts Guide to a Browser-Based Mainframe Terminal",
     summary: "A no-plugin, browser-based 3270 terminal that doubles as a full protocol-level security toolkit, live traffic interception, RACF and DB2 reconnaissance, field-level attribute analysis, and a mock LPAR fleet for training without touching a real mainframe.",
     price: "$1.99",
