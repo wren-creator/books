@@ -1,5 +1,13 @@
 const BOOKS = [
   {
+    title: "Mainframe 101: A Hands-On Training Syllabus for the WebTerm/3270 Mock Fleet",
+    summary: "A six-session, hands-on training syllabus built entirely on a mock mainframe fleet, real TN3270E and TN5250 protocol, real EBCDIC, standing in for z/OS, z/VM, z/TPF, and IBM i, so nobody's production job is at risk while you learn. Covers navigation on all four platforms, a real REXX exec on z/VM, an RPG report on IBM i, and a simple ticketing exercise on z/TPF, every command tested against the actual mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-01",
+    cover: "assets/books/mainframe-101.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",

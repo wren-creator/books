@@ -1,0 +1,6 @@
+title: "Mainframe 101: A Hands-On Training Syllabus for the WebTerm/3270 Mock Fleet"
+summary: "A six-session, hands-on training syllabus built entirely on a mock mainframe fleet, real TN3270E and TN5250 protocol, real EBCDIC, standing in for z/OS, z/VM, z/TPF, and IBM i, so nobody's production job is at risk while you learn. Covers navigation on all four platforms, a real REXX exec on z/VM, an RPG report on IBM i, and a simple ticketing exercise on z/TPF, every command tested against the actual mocks before this book went to print."
+price: "$6.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/mainframe-01"
+cover: "mainframe-101.jpg"
