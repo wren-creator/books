@@ -38,6 +38,17 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 - [x] Add a DNS `CNAME` record at GoDaddy: `books` → `wren-creator.github.io` — live
 - [x] Wire a link from `wren-creator.github.io`'s homepage Publications section over to this page
 
+## Learning Series (Mainframe 101 follow-ons)
+
+*Mainframe 101* ($6.99, live on Gumroad) is book 1 of a planned 5-book learning series built on the WebTerm/3270 mock LPAR fleet. Shape decided 2026-08-10, after weighing how much real mock content exists per platform against how much new build work a standalone book would demand:
+
+- **Book 2 — IBM i (AS/400) & RPG IV**: richest existing mock content already (WRK* commands, PDM source navigation, a real RPG interpreter already running two programs), least new build work needed. Likely next up.
+- **Book 3 — z/OS Fundamentals**: framed as "operator/app developer" (ISPF, JCL, SDSF) rather than the security-tooling angle *WebTerm/3270: The Nuts and Bolts Guide* already owns, so the two titles don't cannibalize each other.
+- **Book 4 — Specialized Engines: z/VM & z/TPF**: combined rather than split into two books. Neither platform's mock content is deep enough on its own yet, z/VM has 2 REXX execs, z/TPF has one ticketing exercise, to justify a standalone title without months of new mock-building first.
+- **Book 5 — Advanced/Capstone**: cross-platform orchestration and integration. Scope still open.
+
+Next step: build a task list per platform, what mock content and exercises each book actually needs, collaboratively before starting Book 2, to confirm real scope before committing writing time. Once a platform's task list is settled, the actual build items belong in `web3270`'s own `Bridge_server/ROADMAP.md` (see its "Mock AS/400 / RPG" section for the existing precedent), this entry just tracks the series-level decision.
+
 ## Later / not yet scoped
 
 - Bundle offer (e.g. "all books for $X") once a bundle product exists in Gumroad
