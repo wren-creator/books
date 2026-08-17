@@ -95,4 +95,12 @@ const BOOKS = [
     gumroadUrl: "https://britley.gumroad.com/l/Terraform_introduction",
     cover: "assets/books/terraform-introduction.jpg",
   },
+  {
+    title: "Rosetta Stone: Modernizing Legacy Software",
+    summary: "Enterprises are still running decades of Fortran, COBOL, REXX, and shell scripts that predate most of the people maintaining them, and the usual modernization advice never answers the one question that actually matters: how do you know the new version does what the old one did? This book covers building an AI pipeline that takes that question seriously, documenting legacy code before touching it, proving behavior instead of assuming it, and marking honestly where automation hits its limits. Part technical walkthrough, part honest accounting of what's actually finished versus what's still broken, and part argument for why sovereign, on-prem AI matters most for the regulated industries carrying the most legacy risk.",
+    price: "$2.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/rosetta_stone",
+    cover: "assets/books/rosetta-stone.jpg",
+  },
 ];
