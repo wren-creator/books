@@ -8,6 +8,22 @@ const BOOKS = [
     cover: "assets/books/mainframe-101.jpg",
   },
   {
+    title: "Mainframe 102: A Hands-On Training Syllabus for IBM i, AS/400, and RPG IV",
+    summary: "A seven-session, hands-on training syllabus built on the WebTerm/3270 mock IBM i fleet, real TN5250 protocol, real CL commands, standing in for an AS/400 so nobody's production job is at risk while you learn. Covers everyday operator navigation (spooled files, jobs, libraries, messages), browsing source with PDM, running Interactive SQL against IBM's own QIWS.QCUSTCDT sample table, and two real fixed-form RPG IV programs run through a genuine RPG interpreter built for this training pair, a text-adventure that teaches control flow through play and a quarterly sales report you extend yourself as a take-home exercise, every command and program tested against the actual mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-102",
+    cover: "assets/books/mainframe-102.jpg",
+  },
+  {
+    title: "Mainframe 103: A Hands-On Training Syllabus for z/OS, TSO, and JCL",
+    summary: "A seven-session, hands-on training syllabus built on the WebTerm/3270 mock z/OS fleet, real TN3270E protocol, a real three-attempt RACF lockout demo, standing in for a z/OS LPAR so nobody's production job is at risk while you learn. Covers TSO logon and that lockout, ISPF navigation, browsing and running real JCL through ISPF's own dataset member lists, the everyday TSO command line, and a SUBMIT-to-SDSF workflow you use twice, once to watch a clean two-step job succeed and once to read a real non-zero return code and fix it yourself. The SUBMIT pipeline reads real JCL and maps known step programs to a canned outcome, not a full batch execution engine, and this book says so plainly rather than pretending otherwise, every command and job tested against the actual mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-103",
+    cover: "assets/books/mainframe-103.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",

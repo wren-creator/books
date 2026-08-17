@@ -1,0 +1,6 @@
+title: "Mainframe 103: A Hands-On Training Syllabus for z/OS, TSO, and JCL"
+summary: "A seven-session, hands-on training syllabus built on the WebTerm/3270 mock z/OS fleet, real TN3270E protocol, a real three-attempt RACF lockout demo, standing in for a z/OS LPAR so nobody's production job is at risk while you learn. Covers TSO logon and that lockout, ISPF navigation, browsing and running real JCL through ISPF's own dataset member lists, the everyday TSO command line, and a SUBMIT-to-SDSF workflow you use twice, once to watch a clean two-step job succeed and once to read a real non-zero return code and fix it yourself. The SUBMIT pipeline reads real JCL and maps known step programs to a canned outcome, not a full batch execution engine, and this book says so plainly rather than pretending otherwise, every command and job tested against the actual mocks before this book went to print."
+price: "$6.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/mainframe-103"
+cover: "mainframe-103.jpg"

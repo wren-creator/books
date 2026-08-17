@@ -1,0 +1,6 @@
+title: "Mainframe 102: A Hands-On Training Syllabus for IBM i, AS/400, and RPG IV"
+summary: "A seven-session, hands-on training syllabus built on the WebTerm/3270 mock IBM i fleet, real TN5250 protocol, real CL commands, standing in for an AS/400 so nobody's production job is at risk while you learn. Covers everyday operator navigation (spooled files, jobs, libraries, messages), browsing source with PDM, running Interactive SQL against IBM's own QIWS.QCUSTCDT sample table, and two real fixed-form RPG IV programs run through a genuine RPG interpreter built for this training pair, a text-adventure that teaches control flow through play and a quarterly sales report you extend yourself as a take-home exercise, every command and program tested against the actual mocks before this book went to print."
+price: "$6.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/mainframe-102"
+cover: "mainframe-102.jpg"
