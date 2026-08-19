@@ -24,6 +24,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-103.jpg",
   },
   {
+    title: "Mainframe 104: A Hands-On Training Syllabus for z/VM and z/TPF",
+    summary: "A six-session, hands-on training syllabus built on the WebTerm/3270 mock z/VM and z/TPF fleet, real TN3270E protocol, a real REXX interpreter, and three genuine privilege tiers you log on to and compare, standing in for both systems so nobody's production job or live booking is at risk while you learn. Covers logging on to CP and running straight into a real security gap most training environments never show you, a masked password field sitting right next to an unmasked command line, CP's resource queries and error messages, the CMS layer and a REXX exec built for this book, MAXVAL, that exercises branching and looping together instead of one at a time, then z/TPF's operator console across OPER, SYSOP, and SYSPROG, a real ZTPF900E authorization failure you hit and then clear properly, and a PNR ticketing workflow, booking, looking up, and cancelling a reservation through to a record that still answers after it's cancelled. Every command and message ID tested against the actual mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-104",
+    cover: "assets/books/mainframe-104.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
