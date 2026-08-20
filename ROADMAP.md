@@ -44,10 +44,10 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 
 - **Book 2 — IBM i (AS/400) & RPG IV**: richest existing mock content already (WRK* commands, PDM source navigation, a real RPG interpreter already running two programs), least new build work needed. Live on Gumroad.
 - **Book 3 — z/OS Fundamentals**: framed as "operator/app developer" (ISPF, JCL, SDSF) rather than the security-tooling angle *WebTerm/3270: The Nuts and Bolts Guide* already owns, so the two titles don't cannibalize each other. Live on Gumroad.
-- **Book 4 — Specialized Engines: z/VM & z/TPF**: combined rather than split into two books. Neither platform's mock content is deep enough on its own yet, z/VM has 2 REXX execs, z/TPF has one ticketing exercise, to justify a standalone title without months of new mock-building first.
+- **Book 4 — Specialized Engines: z/VM & z/TPF**: combined rather than split into two books, six sessions instead of the usual seven, sized to what the mock fleet actually supported. Content task list settled and closed in `web3270`'s `Bridge_server/ROADMAP.md` first (added the MAXVAL REXX exec to close the one real gap), then written, six sessions plus capstone, every command traced against `mock-zvm.js`/`mock-tpf.js` source. Live on Gumroad.
 - **Book 5 — Advanced/Capstone**: cross-platform orchestration and integration. Scope still open.
 
-Next step: same task-list-first approach for Book 4 (z/VM & z/TPF) before committing writing time, since its mock content is the thinnest of the remaining platforms. Once a platform's task list is settled, the actual build items belong in `web3270`'s own `Bridge_server/ROADMAP.md` (see its "Mock AS/400 / RPG" and "Mock z/OS / JCL" sections for the existing precedent), this entry just tracks the series-level decision.
+Next step: scope Book 5. Unlike Books 2-4, there's no existing single-platform mock gap to close first, it's cross-platform orchestration, so the task-list-first approach needs to define what "orchestration across the fleet" actually means as a hands-on exercise before any mock-building starts.
 
 ## Later / not yet scoped
 
