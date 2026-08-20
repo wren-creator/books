@@ -51,7 +51,8 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 
 ## Later / not yet scoped
 
-- Bundle offer for the Mainframe 101-105 learning series, $24.99 — in progress, see below
 - Gumroad API integration for automation (sales webhooks, emailing past buyers about new releases), not needed for launch, only becomes relevant once there's an actual buyer list to act on
+- **200 series** — next tier after the 100 series (101-105, now complete). Shift decided 2026-08-20: operational judgment over rote commands, troubleshooting/incident-response style scenarios on the same platforms, plus a first, deliberately light touch of security-adjacent content (reading RACF/security posture, spotting misconfigurations) short of full pentesting. Not yet scoped platform-by-platform or against the mock fleet's actual content.
+- **400 series** — where the heavier security depth from the 200 series' light touch goes instead: advanced, closer to pentesting-territory work, likely the natural home for content the 100-105 learning series deliberately stayed out of (e.g. the AS/400 mock's unused Wave 1-3 weak-security panels, z/TPF's security tools panel). Not yet scoped.
 
 Full implementation detail lives in the working plan from the session this was scaffolded in: `/Users/britleywrenhoff/.claude/plans/let-s-talk-through-and-parallel-cocke.md`.
