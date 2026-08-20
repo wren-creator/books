@@ -40,6 +40,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-105.jpg",
   },
   {
+    title: "The Mainframe 100 Series Bundle",
+    summary: "The complete Mainframe 100 series in one bundle: Mainframe 101 through 105, plus TN3270 Uncovered, six books for less than the price of five. One mock LPAR fleet, real TN3270E and TN5250 protocol, real EBCDIC, so you can log on, break something, and fix it without a production job anywhere near the blast radius. 101 tours all four platforms, 102 goes deep on IBM i with two real RPG IV programs, 103 goes deep on z/OS with a real RACF lockout and JCL you submit yourself, 104 covers z/VM and z/TPF together, and 105 chains all four platforms into one verified cross-platform exercise. TN3270 Uncovered is the book underneath all five, a byte-by-byte walkthrough of the TN3270E handshake and data stream, the zero-dependency library built from that research, and a real TN5250 chapter for IBM i's own cousin protocol.",
+    price: "$24.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/100-series",
+    cover: "assets/books/100-series-bundle.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
