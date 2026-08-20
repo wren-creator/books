@@ -32,6 +32,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-104.jpg",
   },
   {
+    title: "Mainframe 105: A Hands-On Training Syllabus for Cross-Platform Orchestration",
+    summary: "A six-session, hands-on training syllabus that closes out the Mainframe 101-105 learning series by chaining all four mock hosts together for real, z/OS, IBM i, z/VM, and z/TPF, so finishing one platform's task is the literal, checked prerequisite for starting the next. A real z/OS batch job issues a Batch Control Number, a real IBM i command validates it and issues a Resource Clearance Code, a real z/VM REXX exec checks that and computes a System Authorization Value, and z/TPF's booking command won't finalize a reservation without proof from all three, carried by hand between four terminal sessions open at once, the same way an operator working four green screens with no API between them always has. Nothing is simulated integration, each mock still runs as its own independent process with no shared database; you are the connecting layer. Book 1 and Book 4's plain booking-command examples still work exactly as documented, untouched. Every command and message tested against the actual running mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-105",
+    cover: "assets/books/mainframe-105.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
