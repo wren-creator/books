@@ -48,6 +48,14 @@ const BOOKS = [
     cover: "assets/books/100-series-bundle.jpg",
   },
   {
+    title: "Mainframe 201: A Hands-On Guide to Operational Judgment and Triage",
+    summary: "A six-session, hands-on guide that opens the 200 series by teaching the loop every real mainframe operator actually runs: Triage, Isolate, Remediate. Four platforms, z/OS, IBM i, z/VM, z/TPF, one small scenario each, built on the same real mock LPAR fleet this whole series runs on. Every symptom is genuinely ambiguous the way a real one would be, a return code that isn't wrong but isn't the whole story, a job that looks stuck but is legitimately queued, a disk link failure that has nothing to do with the password you're blaming, a slowdown that has nothing to do with CPU, and every root cause is completely real and fixed, the same reproducibility discipline this series has held since Book 1. Woven through with real history, where the return-code convention actually came from, where runbooks came from, why z/VM eventually needed a whole second file-sharing model, why TPF's decades-old design choice is still relevant to modern low-latency systems. Every command and message tested against the actual running mocks before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-201",
+    cover: "assets/books/mainframe-201.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
