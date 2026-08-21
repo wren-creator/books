@@ -49,10 +49,24 @@ Direct sales also get buyer emails, which Apple denies entirely. Useful later fo
 
 **Learning series complete as of 2026-08-20** — all five books (101-105) shipped and live on Gumroad.
 
+## 200 Series (Operational Judgment)
+
+Full plan: `/Users/britleywrenhoff/.claude/plans/let-s-plan-out-what-lively-tarjan.md`. Task list logged in `web3270`'s `Bridge_server/ROADMAP.md` ("Operational Judgment — Mainframe 200 series prep"). Shift decided 2026-08-21: operational judgment over rote commands, troubleshooting/incident-response scenarios on the same four platforms, plus a first, deliberately light touch of security-adjacent content, heavier security depth reserved for a future 400 series.
+
+Two constraints shaped the whole series before any book got scoped: *WebTerm/3270: The Nuts and Bolts Guide* already owns nearly all the obvious security-tooling content (deep z/OS RACF recon, CICS/DB2, the z/VM minidisk exposure, the entire IBM i 7-tool security suite), so none of that is reusable without cannibalizing an already-published book. And nothing in the mock fleet models an ambiguous/multi-cause failure today, every outcome anywhere is a single fixed, deterministic response, that's the one real new-build lift every book in this series needs.
+
+- **Book 1 — Orientation**: one small Differential-Diagnosis vignette per platform, teaches the Triage → Isolate → Remediate loop the rest of the series exercises.
+- **Book 2 — IBM i**: pure operational-judgment (job queues, subsystems, RPG behaving unexpectedly), light touch reframed as operational auditing/forensics rather than security tooling to avoid overlapping Nuts and Bolts' claimed territory.
+- **Book 3 — z/OS**: operational-judgment plus the already-built, book-unclaimed Dataset Recon Scanner as the light security touch, "everyday hygiene," not RACF auditing.
+- **Book 4 — z/VM & z/TPF**: paired like Book 4 of the 100 series. z/VM gets CP-layer resource troubleshooting; z/TPF's already-built, book-unclaimed security tools panel becomes the primary content, reframed as Resource Containment & System Stability. Lightest new-build lift of the series.
+- **Book 5 — Capstone**: cross-platform incident correlating symptoms across all four mocks, mirrors the 100 series' capstone role but for diagnosis instead of a scripted chain.
+
+**Length and voice**: each book targets at least 24 pages, longer than the leaner 100-series books; where more length is needed, real historical context (why a platform or failure mode exists the way it does) fills it out, in Britley's storyteller voice, not padding for padding's sake. **Cover art**: same structural template as the 100 series, a different accent color scheme so the two series read as related but visually distinct.
+
+Working in Auto mode on this series per the user's direction (2026-08-21).
+
 ## Later / not yet scoped
 
 - Gumroad API integration for automation (sales webhooks, emailing past buyers about new releases), not needed for launch, only becomes relevant once there's an actual buyer list to act on
-- **200 series** — next tier after the 100 series (101-105, now complete). Shift decided 2026-08-20: operational judgment over rote commands, troubleshooting/incident-response style scenarios on the same platforms, plus a first, deliberately light touch of security-adjacent content (reading RACF/security posture, spotting misconfigurations) short of full pentesting. Not yet scoped platform-by-platform or against the mock fleet's actual content.
-- **400 series** — where the heavier security depth from the 200 series' light touch goes instead: advanced, closer to pentesting-territory work, likely the natural home for content the 100-105 learning series deliberately stayed out of (e.g. the AS/400 mock's unused Wave 1-3 weak-security panels, z/TPF's security tools panel). Not yet scoped.
 
 Full implementation detail lives in the working plan from the session this was scaffolded in: `/Users/britleywrenhoff/.claude/plans/let-s-talk-through-and-parallel-cocke.md`.
