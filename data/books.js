@@ -56,6 +56,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-201.jpg",
   },
   {
+    title: "Mainframe 202: A Hands-On Guide to IBM i Operational Judgment",
+    summary: "The second book in the 200 series, going deep on IBM i after Book 201's cross-platform orientation. Three real, verified scenarios: a held month-end report mistaken for a broken print queue, a completed job confirmed clean by reading its job log instead of trusting a status code, and a batch job at MSGW correctly read as waiting on a human decision instead of hung. Every scenario runs on the same free, open mock LPAR fleet the whole series uses, reproducible exactly, every time you restart it. Woven through with real IBM i history, why single-level storage matters, where 'spool' actually comes from, why job logs are structured the way they are, and why an operating system built in 1978 to talk back to its operators still holds up against platforms decades younger.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-202",
+    cover: "assets/books/mainframe-202.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
