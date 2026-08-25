@@ -64,6 +64,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-202.jpg",
   },
   {
+    title: "Mainframe 203: A Hands-On Guide to z/OS Operational Judgment",
+    summary: "The third book in the 200 series, going deep on z/OS after Book 202's IBM i focus. A payroll job fails with a real 'DATA SET NOT FOUND' message that reads like data loss but isn't, LISTCAT confirms the data is fine and the job's own JCL is just pointed at a stale, renamed dataset name. From there, that same LISTCAT command becomes the book's first, deliberately light security touch, scanning dataset prefixes for sensitive-looking names as everyday hygiene, not a RACF audit. Runs on the same free, open mock LPAR fleet the whole series uses, reproducible exactly, every time you restart it. Woven through with real z/OS history, why the platform talks in terse coded messages instead of full sentences, where the 0/4/8/12/16 return-code convention actually came from, and JES2's own lineage back to a 1960s system built to keep a slow printer from stalling a fast processor.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-203",
+    cover: "assets/books/mainframe-203.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
