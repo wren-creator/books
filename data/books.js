@@ -72,6 +72,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-203.jpg",
   },
   {
+    title: "Mainframe 204: A Hands-On Guide to z/VM and z/TPF Operational Judgment",
+    summary: "The fourth book in the 200 series, pairing z/VM and z/TPF the way Book 104 paired them in the 100 series, because both platforms share one design commitment, never go down, pursued two completely different ways. A z/VM LINK fails with a message that looks exactly like a Book 201 scenario and isn't, the real cause is the requester's own virtual device address already occupied, nothing to do with the disk they were trying to borrow. On z/TPF, two entry points sitting at zero transactions get proven alive rather than assumed dead, and a memory-pool capacity warning turns out to be containment working exactly as designed. Runs on the same free, open mock LPAR fleet the whole series uses, reproducible exactly, every time you restart it. Woven through with real history, z/VM's lineage back to 1960s virtualization research, decades before 'the cloud' made the same idea sound new, and z/TPF's containment philosophy, an idea the rest of the software industry didn't formalize and name until decades later.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-204",
+    cover: "assets/books/mainframe-204.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
