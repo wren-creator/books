@@ -80,6 +80,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-204.jpg",
   },
   {
+    title: "Mainframe 205: The Capstone, One Incident, Four Systems",
+    summary: "The final book in the 200 series and the last book in the whole ten-book training series. One incident happens across z/TPF, z/VM, z/OS, and IBM i simultaneously, and each platform shows something real and genuinely alarming on its own, a payment entry point with a rising backlog, a logged-on user connected for hours longer than anyone else, a job that completed clean but against data that wasn't ready, and a privileged batch job still running well past when it should have finished. No relay, no hand-off between platforms, just four honest alarms and the discipline to trace all four back to the one place the incident actually started, without reacting to the three platforms that were never actually broken. It's also the reveal this whole series has been building toward without saying so: the month-end jobs from Books 201, 202, and 203 were never separate platform lessons, they were pieces of the same recurring overnight cycle, finally shown whole. Runs on the same free, open mock LPAR fleet the whole series uses, reproducible exactly, every time you restart it.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-205",
+    cover: "assets/books/mainframe-205.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
