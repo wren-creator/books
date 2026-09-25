@@ -67,6 +67,24 @@ Two constraints shaped the whole series before any book got scoped: *WebTerm/327
 
 Working in Auto mode on this series per the user's direction (2026-08-21).
 
+## 300 series: deliberately skipped
+
+There is no 300 series and none is planned. The 400 series (below) is the training series finale, following directly after the 200 series. This is a stated decision, not an unscoped gap.
+
+## 400 Series (Adversarial Depth, the series finale)
+
+Full plan: `/Users/britleywrenhoff/.claude/plans/review-the-entire-the-kind-thompson.md`. Task list logged in `web3270`'s `Bridge_server/ROADMAP.md` ("Adversarial Depth — Mainframe 400 series prep"). Scoped 2026-09-25: a purple-team adversarial lifecycle (attacker emulation paired with defense and reporting, under strict rules-of-engagement framing) across all four platforms, the "heavier security depth" the 200 series always pointed at. Each book targets roughly 12,000 words, about double a 200-series book, through added pedagogical apparatus (worksheets, scenario-based review questions with an answer key, a per-book mock-fidelity honesty sidebar) rather than padding.
+
+Organized by engagement lifecycle phase, not by platform, the deliberate structural break from the 100 and 200 series: every book crosses all four platforms.
+
+- **Book 1 — Recon and the Protocol Edge** (*Mainframe 401*): authorization scoping, then passive/active recon (protocol negotiation tracing, ESM fingerprinting, MITM, traffic recording) against all four mocks. No new mock lift, reuses existing tooling.
+- **Book 2 — Automated Adversary Emulation** (*Mainframe 402*): scripted/scaled recon and exploitation via the macro engine, REST API, and MCP server; a resilient-automation session (field-based waits, not hardcoded coordinates); a "Debunking the Copilot" session showing the AI Copilot generating invalid JCL/REXX/RPG and walking the manual fix.
+- **Book 3 — Privilege Escalation Across the Fleet** (*Mainframe 403*): one new escalation vector per platform (z/OS APF/JCL, IBM i program adoption, z/VM CP-privilege class, z/TPF entry-point privilege), none overlapping *Nuts and Bolts*' claimed tools. Heaviest new-build lift of the series.
+- **Book 4 — Lateral Movement and Persistence** (*Mainframe 404*): cross-platform trust/handoff exposure paths and a persistence vector, reusing the proven multi-session-tabs mechanic adversarially.
+- **Book 5 — Capstone** (*Mainframe 405*): the defender's half of the lifecycle, a Detection Worksheet correlating 401-404's attack artifacts, and a purple-team report exercise, same series-finale role 205 and 105 played for their series.
+
+**300 skipped, 400 is final**: no further numbered series is planned after 400.
+
 ## Later / not yet scoped
 
 - Gumroad API integration for automation (sales webhooks, emailing past buyers about new releases), not needed for launch, only becomes relevant once there's an actual buyer list to act on
