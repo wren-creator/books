@@ -77,11 +77,11 @@ Full plan: `/Users/britleywrenhoff/.claude/plans/review-the-entire-the-kind-thom
 
 Organized by engagement lifecycle phase, not by platform, the deliberate structural break from the 100 and 200 series: every book crosses all four platforms.
 
-- **Book 1 — Recon and the Protocol Edge** (*Mainframe 401*): authorization scoping, then passive/active recon (protocol negotiation tracing, ESM fingerprinting, MITM, traffic recording) against all four mocks. No new mock lift, reuses existing tooling.
+- **Book 1 — Recon and the Protocol Edge** (*Mainframe 401*): authorization scoping, then passive/active recon (protocol negotiation tracing, ESM fingerprinting, MITM, traffic recording) against all four mocks. No new mock lift, reuses existing tooling. Built and verified live against the real mocks, eight sessions written (~11,500 words, roughly double a 200-series book), review questions with an answer key, violet cover art, packaged. Live on Gumroad.
 - **Book 2 — Automated Adversary Emulation** (*Mainframe 402*): scripted/scaled recon and exploitation via the macro engine, REST API, and MCP server; a resilient-automation session (field-based waits, not hardcoded coordinates); a "Debunking the Copilot" session showing the AI Copilot generating invalid JCL/REXX/RPG and walking the manual fix.
 - **Book 3 — Privilege Escalation Across the Fleet** (*Mainframe 403*): one new escalation vector per platform (z/OS APF/JCL, IBM i program adoption, z/VM CP-privilege class, z/TPF entry-point privilege), none overlapping *Nuts and Bolts*' claimed tools. Heaviest new-build lift of the series.
 - **Book 4 — Lateral Movement and Persistence** (*Mainframe 404*): cross-platform trust/handoff exposure paths and a persistence vector, reusing the proven multi-session-tabs mechanic adversarially.
-- **Book 5 — Capstone** (*Mainframe 405*): the defender's half of the lifecycle, a Detection Worksheet correlating 401-404's attack artifacts, and a purple-team report exercise, same series-finale role 205 and 105 played for their series.
+- **Book 5 — Detection, Response, and the Purple Team Report** (*Mainframe 405*, the capstone): the defender's half of the lifecycle, a Detection Worksheet correlating 401-404's attack artifacts, and a purple-team report exercise, same series-finale role 205 and 105 played for their series.
 
 **300 skipped, 400 is final**: no further numbered series is planned after 400.
 

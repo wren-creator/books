@@ -88,6 +88,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-205.jpg",
   },
   {
+    title: "Mainframe 401: Recon and the Protocol Edge",
+    summary: "The first book in the 400 series, the last series in this training project. Eight sessions, all four platforms, built on the discipline the whole series is named for: scope it in writing before you touch anything, then read what a system is already telling you, a TN3270E handshake, a failed-login message, a pre-authentication banner, without ever needing to break in. The centerpiece session takes one z/OS mock and switches it live across RACF, ACF2, and Top Secret, so you watch the exact passive fingerprinting logic behind a real recon tool identify all three, one right after the other, from nothing but message text the system was always going to show you. z/VM hands you a login flow that quietly tells you which usernames are real. IBM i and z/TPF, the two platforms everyone assumes have the least to find, turn out to hold this book's single biggest finding. Closes with eleven scenario-based review questions and a real answer key, first time this series has done that. Runs on the same free, open mock LPAR fleet the whole series uses, every command verified live before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-401",
+    cover: "assets/books/mainframe-401.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
