@@ -96,6 +96,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-401.jpg",
   },
   {
+    title: "Mainframe 402: Automated Adversary Emulation",
+    summary: "Mainframe 402 picks up exactly where 401 left off: the same recon, the same four platforms, now scripted and scaled instead of typed by hand, one command at a time. Eight sessions built on WebTerm/3270's three real automation surfaces, the macro engine, a headless REST endpoint, and an MCP server an AI agent can drive directly, each one exercised for real against the mock fleet before this book went to print. The session that matters most isn't a feature walkthrough, it's a live demonstration: asked to submit a plausible nightly payroll job, an AI assistant confidently invented a JCL member name that doesn't exist, and the mock's own honest rejection caught it cold. That's the whole book in one moment, automation is only as trustworthy as the verification habit built into it, whether the thing making the claim is a script, an agent, or an AI copilot sounding sure of itself. A dedicated session tackles the fragility every automation project eventually hits, scripts built on hardcoded screen positions that silently break the moment a screen shifts, and shows the actual fix. Closes with twelve scenario-based review questions and a real answer key. Every command, every message, every screen was run against the real, free, open mock fleet before this book went to print, same standard held since page one of Mainframe 101.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-402",
+    cover: "assets/books/mainframe-402.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
