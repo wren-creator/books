@@ -104,6 +104,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-402.jpg",
   },
   {
+    title: "Mainframe 403: Privilege Escalation Across the Fleet",
+    summary: "Mainframe 403 is the heaviest build this series has done: real, working privilege escalation, on all four platforms, none of it borrowed from what WebTerm/3270: The Nuts and Bolts Guide already covers. Two of the four vectors pick up exactly where that book's own scanners left off, at a real finding it correctly flagged but never went on to exploit, a writable APF-authorized library on z/OS, a job description quietly running as the security officer on IBM i. The other two are new ground entirely: z/VM gets its first privilege-class model, immediately undercut by an old, unremarkable REXX exec that bypasses it completely, and z/TPF's debugger gets its first authorization check, defeated in the very next session by a memory-read command that never asks which program's boundary it's actually crossing. Every escalation is real and repeatable against the free, open mock fleet, proof of concept only, a discipline the book makes explicit rather than assumed. A synthesis session pulls all four vectors into one underlying question worth asking on any system, and the closing sessions cover what a defender would actually catch and how to write these findings up honestly. Along the way, the book caught two real bugs in its own new code, a REXX syntax gap and a memory-address collision, and left both in as an example of the same verify-before-trust discipline turned on the author's own work. Every command, every message, every screen was run against the real, live fleet, more than once, before this book went to print.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-403",
+    cover: "assets/books/mainframe-403.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
