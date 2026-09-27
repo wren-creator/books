@@ -88,6 +88,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-205.jpg",
   },
   {
+    title: "The Mainframe 200 Series Bundle",
+    summary: "Mainframe 201 through 205 are one story told across five books, and the shape of it doesn't show until the last one. The first four each hand you a real incident on one platform, or a platform pair, no rote command drills, just an ambiguous symptom and the same Triage, Isolate, Remediate loop a real on-call shift actually runs on. What you don't know until Book 205, the capstone, is that three quiet threads have been running underneath every book since page one of Book 201, names that sat in earlier sessions as background noise, never explained. 205 is one incident, felt as four separate, genuinely ambiguous symptoms across all four platforms at once, and correlating it backward, from where it's felt to where it actually started, reveals the whole cycle those earlier threads were quietly part of the entire time. This series also carries the first, deliberately light security touch in the whole training arc, reframed as operational hygiene rather than security tooling. Five books for less than the price of three individually. Every command, every screen, and every system message in all five was run against the real, live mock fleet, more than once, before any of them went to print.",
+    price: "$14.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/200-series",
+    cover: "assets/books/200-series-bundle.jpg",
+  },
+  {
     title: "Mainframe 401: Recon and the Protocol Edge",
     summary: "The first book in the 400 series, the last series in this training project. Eight sessions, all four platforms, built on the discipline the whole series is named for: scope it in writing before you touch anything, then read what a system is already telling you, a TN3270E handshake, a failed-login message, a pre-authentication banner, without ever needing to break in. The centerpiece session takes one z/OS mock and switches it live across RACF, ACF2, and Top Secret, so you watch the exact passive fingerprinting logic behind a real recon tool identify all three, one right after the other, from nothing but message text the system was always going to show you. z/VM hands you a login flow that quietly tells you which usernames are real. IBM i and z/TPF, the two platforms everyone assumes have the least to find, turn out to hold this book's single biggest finding. Closes with eleven scenario-based review questions and a real answer key, first time this series has done that. Runs on the same free, open mock LPAR fleet the whole series uses, every command verified live before this book went to print.",
     price: "$6.99",
