@@ -112,6 +112,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-403.jpg",
   },
   {
+    title: "Mainframe 404: Lateral Movement and Persistence",
+    summary: "Mainframe 404 is the fourth book in the Adversarial Depth series, and it needed exactly zero new exploits to make its point. Sessions 2 through 5 walk a real, live chain across all four mock platforms, z/OS, IBM i, z/VM, z/TPF, using nothing but three short strings this project's own earlier book, Mainframe 105, printed for every reader months ago. No escalation, no privilege check bypassed, just an ordinary logon on each platform and the discovery that every hop in that chain checks whether a value matches, never where it came from. By the end, an account that touched exactly one of the four systems has completed a transaction the chain's own rules call fully verified. Session 7 turns to something different: a small, deliberately inert action planted in a z/VM startup exec that fires again on an ordinary logon, days later, with no attacker session open anywhere. Every command, every message, and every screen in this book was run against the real, live mock fleet, more than once, before it went to print, same as every book in this series since Mainframe 101.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-404",
+    cover: "assets/books/mainframe-404.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
