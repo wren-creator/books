@@ -128,6 +128,14 @@ const BOOKS = [
     cover: "assets/books/mainframe-404.jpg",
   },
   {
+    title: "Mainframe 405: Detection, Response, and the Purple Team Report",
+    summary: "Mainframe 405 is the final book in the entire training series, and it closes on a question that took going back over four already-published books to even find: what would one continuous defender, watching the whole engagement instead of reading it one book at a time, have actually seen? Four accounts, one per platform, turn out to recur across all four attack books, IBMUSER on z/OS, JSMITH on IBM i, DEMO on z/VM, TPFOP01 on z/TPF, and nobody was ever asked to trace any single one of them from first recon contact through to a completed, high-impact action. This book does exactly that, four platform trails, a Detection Worksheet that extends the prior book's own Pivot Map backward across the whole series, an honest ranking of which findings a realistic defensive posture would actually have caught versus which need a human deliberately looking, and a session on writing the real report document a client actually receives. No new exploit, no new mock feature, just the defender's half of a story that was already complete and waiting to be read the right way. Fourteen review questions spanning all five books of the 400 series close it out, along with a real series closing, fifteen books, three series, one training project, and no book six.",
+    price: "$6.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/mainframe-405",
+    cover: "assets/books/mainframe-405.jpg",
+  },
+  {
     title: "Silicon Sovereignty: Orchestrating Private AI at the Edge",
     summary: "A build guide for running private AI entirely on hardware you own, from picking the silicon to wiring MCP-based agentic tools on top of it. Covers MacBook Pro and Linux power-user builds side by side, hardening the node, running a multi-agent swarm, and a checklist for calling a sovereign AI node actually done.",
     price: "$1.99",
