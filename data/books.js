@@ -215,4 +215,12 @@ const BOOKS = [
     gumroadUrl: "https://britley.gumroad.com/l/rosetta_stone",
     cover: "assets/books/rosetta-stone.jpg",
   },
+  {
+    title: "Pentesting the AS/400: History, the Bare Metal, the OS, and a Full Security Audit Done Right",
+    summary: "Most security writing skips the AS/400 entirely because it doesn't look like anything else, while it's still running core payroll, general ledger, and inventory at more shops than its reputation suggests. This book refuses to pick a side between the two ways that gets handled badly: the pentester who runs tools against a system they don't understand, and the compliance-minded reader who can recite authorization language but couldn't tell you what a special authority actually grants. Five sessions cover where this machine came from, what it's built on, how its object-based OS actually thinks, and a full IBM i-specific Rules of Engagement chapter, before a single tool gets touched. Then a real, open-source audit toolset, twelve working scanners and a live command-line bypass probe, covered two ways every time, the exact command by hand and the matching one-click button in a real browser-based Security panel, so you can defend a finding either way. Every command, screen capture, and risk rating came straight from real running source, nothing invented. 76 pages.",
+    price: "$14.99",
+    formats: ["EPUB"],
+    gumroadUrl: "https://britley.gumroad.com/l/pentest-as400",
+    cover: "assets/books/pentesting-as400.jpg",
+  },
 ];
