@@ -44,84 +44,96 @@
   </div>
 </footer>
 
-<script src="data/books.js"></script>
 <script>
-  const NEW_DAYS = 7;
-  const CATEGORIES = ['Mainframe Training', 'Mainframe Security', 'AI & Infrastructure', 'Industrial (ICS/OT)', 'Bundles'];
-  const grid = document.getElementById('book-grid');
-  const pillBox = document.getElementById('pills');
-  const searchBox = document.getElementById('search');
-  const countEl = document.getElementById('result-count');
-  const noResults = document.getElementById('no-results');
-  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const isNew = (book) => book.added && (Date.now() - new Date(book.added + 'T00:00:00').getTime()) <= NEW_DAYS * 86400000;
+  // The host caches files for 10 minutes. A per-minute query string on the catalog
+  // makes browsers and the CDN fetch a fresh copy, so a new title shows up within a minute.
+  const loader = document.createElement('script');
+  loader.src = 'data/books.js?v=' + Math.floor(Date.now() / 60000);
+  loader.onload = init;
+  loader.onerror = () => {
+    document.getElementById('no-results').textContent = 'The catalog did not load. Reload the page.';
+    document.getElementById('no-results').hidden = false;
+  };
+  document.body.appendChild(loader);
 
-  let activeCategory = 'All';
+  function init() {
+    const NEW_DAYS = 7;
+    const CATEGORIES = ['Mainframe Training', 'Mainframe Security', 'AI & Infrastructure', 'Industrial (ICS/OT)', 'Bundles'];
+    const grid = document.getElementById('book-grid');
+    const pillBox = document.getElementById('pills');
+    const searchBox = document.getElementById('search');
+    const countEl = document.getElementById('result-count');
+    const noResults = document.getElementById('no-results');
+    const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const isNew = (book) => book.added && (Date.now() - new Date(book.added + 'T00:00:00').getTime()) <= NEW_DAYS * 86400000;
 
-  const cards = BOOKS.map((book) => {
-    const card = document.createElement('div');
-    card.className = 'book-card' + (book.category === 'Bundles' ? ' bundle' : '');
-    card.innerHTML = `
-      <div class="cover-wrap">
-        <img class="cover" src="${book.cover}" alt="${esc(book.title)} cover">
-        ${isNew(book) ? '<span class="badge-new">New</span>' : ''}
-        ${book.category === 'Bundles' ? '<span class="badge-bundle">Bundle</span>' : ''}
-      </div>
-      <h2>${book.title}</h2>
-      <p class="summary">${book.summary}</p>
-      <div class="meta">
-        <span class="price">${book.price}</span>
-        <div class="formats">${book.formats.map(f => `<span>${f}</span>`).join('')}</div>
-      </div>
-      <a class="btn" href="${book.gumroadUrl}" target="_blank" rel="noopener">Buy now &rarr;</a>
-    `;
-    grid.appendChild(card);
-    return { book, card, title: book.title.toLowerCase(), category: (book.category || '').toLowerCase(), summary: book.summary.toLowerCase() };
-  });
+    let activeCategory = 'All';
 
-  ['All', ...CATEGORIES].forEach((name) => {
-    const count = name === 'All' ? BOOKS.length : BOOKS.filter(b => b.category === name).length;
-    if (!count) return;
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'pill';
-    btn.dataset.category = name;
-    btn.setAttribute('aria-pressed', name === 'All');
-    btn.textContent = `${name} (${count})`;
-    btn.addEventListener('click', () => { activeCategory = name; render(); });
-    pillBox.appendChild(btn);
-  });
-
-  function render() {
-    const q = searchBox.value.trim().toLowerCase();
-    let shown = 0;
-    const scored = cards.map((c, i) => {
-      // Bundles only appear under All and Bundles, so they do not break up a series.
-      const inCategory = activeCategory === 'All' || c.book.category === activeCategory;
-      let score = 0;
-      if (!q) score = 1;
-      else {
-        if (c.title.includes(q)) score = 3;
-        else if (c.category.includes(q)) score = 2;
-        else if (c.summary.includes(q)) score = 1;
-      }
-      return { c, i, score: inCategory ? score : 0 };
+    const cards = BOOKS.map((book) => {
+      const card = document.createElement('div');
+      card.className = 'book-card' + (book.category === 'Bundles' ? ' bundle' : '');
+      card.innerHTML = `
+        <div class="cover-wrap">
+          <img class="cover" src="${book.cover}" alt="${esc(book.title)} cover">
+          ${isNew(book) ? '<span class="badge-new">New</span>' : ''}
+          ${book.category === 'Bundles' ? '<span class="badge-bundle">Bundle</span>' : ''}
+        </div>
+        <h2>${book.title}</h2>
+        <p class="summary">${book.summary}</p>
+        <div class="meta">
+          <span class="price">${book.price}</span>
+          <div class="formats">${book.formats.map(f => `<span>${f}</span>`).join('')}</div>
+        </div>
+        <a class="btn" href="${book.gumroadUrl}" target="_blank" rel="noopener">Buy now &rarr;</a>
+      `;
+      grid.appendChild(card);
+      return { book, card, title: book.title.toLowerCase(), category: (book.category || '').toLowerCase(), summary: book.summary.toLowerCase() };
     });
-    scored.forEach(({ c, score }) => {
-      c.card.hidden = score === 0;
-      if (score) shown++;
+
+    ['All', ...CATEGORIES].forEach((name) => {
+      const count = name === 'All' ? BOOKS.length : BOOKS.filter(b => b.category === name).length;
+      if (!count) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pill';
+      btn.dataset.category = name;
+      btn.setAttribute('aria-pressed', name === 'All');
+      btn.textContent = `${name} (${count})`;
+      btn.addEventListener('click', () => { activeCategory = name; render(); });
+      pillBox.appendChild(btn);
     });
-    // With a search term, best title matches first; otherwise keep the catalog order.
-    if (q) scored.filter(s => s.score).sort((a, b) => b.score - a.score || a.i - b.i)
-      .forEach(({ c }) => grid.appendChild(c.card));
-    else cards.forEach(c => grid.appendChild(c.card));
-    pillBox.querySelectorAll('.pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.category === activeCategory));
-    countEl.textContent = (q || activeCategory !== 'All') ? `${shown} of ${BOOKS.length} books` : `${BOOKS.length} books`;
-    noResults.hidden = shown !== 0;
+
+    function render() {
+      const q = searchBox.value.trim().toLowerCase();
+      let shown = 0;
+      const scored = cards.map((c, i) => {
+        // Bundles only appear under All and Bundles, so they do not break up a series.
+        const inCategory = activeCategory === 'All' || c.book.category === activeCategory;
+        let score = 0;
+        if (!q) score = 1;
+        else {
+          if (c.title.includes(q)) score = 3;
+          else if (c.category.includes(q)) score = 2;
+          else if (c.summary.includes(q)) score = 1;
+        }
+        return { c, i, score: inCategory ? score : 0 };
+      });
+      scored.forEach(({ c, score }) => {
+        c.card.hidden = score === 0;
+        if (score) shown++;
+      });
+      // With a search term, best title matches first; otherwise keep the catalog order.
+      if (q) scored.filter(s => s.score).sort((a, b) => b.score - a.score || a.i - b.i)
+        .forEach(({ c }) => grid.appendChild(c.card));
+      else cards.forEach(c => grid.appendChild(c.card));
+      pillBox.querySelectorAll('.pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.category === activeCategory));
+      countEl.textContent = (q || activeCategory !== 'All') ? `${shown} of ${BOOKS.length} books` : `${BOOKS.length} books`;
+      noResults.hidden = shown !== 0;
+    }
+
+    searchBox.addEventListener('input', render);
+    render();
   }
-
-  searchBox.addEventListener('input', render);
-  render();
 </script>
 
 </body>
