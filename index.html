@@ -21,7 +21,13 @@
 <section id="books">
   <div class="wrap">
     <p class="eyebrow">Catalog</p>
+    <div class="catalog-controls">
+      <input id="search" class="search" type="search" placeholder="Search titles and descriptions" aria-label="Search books" autocomplete="off">
+      <div class="pills" id="pills" role="group" aria-label="Filter by category"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+    </div>
     <div class="book-grid" id="book-grid"></div>
+    <p class="no-results" id="no-results" hidden>No books match that. Clear the search or pick All.</p>
   </div>
 </section>
 
@@ -40,12 +46,27 @@
 
 <script src="data/books.js"></script>
 <script>
+  const NEW_DAYS = 7;
+  const CATEGORIES = ['Mainframe Training', 'Mainframe Security', 'AI & Infrastructure', 'Industrial (ICS/OT)', 'Bundles'];
   const grid = document.getElementById('book-grid');
-  BOOKS.forEach((book) => {
+  const pillBox = document.getElementById('pills');
+  const searchBox = document.getElementById('search');
+  const countEl = document.getElementById('result-count');
+  const noResults = document.getElementById('no-results');
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const isNew = (book) => book.added && (Date.now() - new Date(book.added + 'T00:00:00').getTime()) <= NEW_DAYS * 86400000;
+
+  let activeCategory = 'All';
+
+  const cards = BOOKS.map((book) => {
     const card = document.createElement('div');
-    card.className = 'book-card';
+    card.className = 'book-card' + (book.category === 'Bundles' ? ' bundle' : '');
     card.innerHTML = `
-      <img class="cover" src="${book.cover}" alt="${book.title} cover">
+      <div class="cover-wrap">
+        <img class="cover" src="${book.cover}" alt="${esc(book.title)} cover">
+        ${isNew(book) ? '<span class="badge-new">New</span>' : ''}
+        ${book.category === 'Bundles' ? '<span class="badge-bundle">Bundle</span>' : ''}
+      </div>
       <h2>${book.title}</h2>
       <p class="summary">${book.summary}</p>
       <div class="meta">
@@ -55,7 +76,51 @@
       <a class="btn" href="${book.gumroadUrl}" target="_blank" rel="noopener">Buy now &rarr;</a>
     `;
     grid.appendChild(card);
+    return { book, card, title: book.title.toLowerCase(), summary: book.summary.toLowerCase() };
   });
+
+  ['All', ...CATEGORIES].forEach((name) => {
+    const count = name === 'All' ? BOOKS.length : BOOKS.filter(b => b.category === name).length;
+    if (!count) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pill';
+    btn.dataset.category = name;
+    btn.setAttribute('aria-pressed', name === 'All');
+    btn.textContent = `${name} (${count})`;
+    btn.addEventListener('click', () => { activeCategory = name; render(); });
+    pillBox.appendChild(btn);
+  });
+
+  function render() {
+    const q = searchBox.value.trim().toLowerCase();
+    let shown = 0;
+    const scored = cards.map((c, i) => {
+      // Bundles only appear under All and Bundles, so they do not break up a series.
+      const inCategory = activeCategory === 'All' || c.book.category === activeCategory;
+      let score = 0;
+      if (!q) score = 1;
+      else {
+        if (c.title.includes(q)) score += 10;
+        if (c.summary.includes(q)) score += 2;
+      }
+      return { c, i, score: inCategory ? score : 0 };
+    });
+    scored.forEach(({ c, score }) => {
+      c.card.hidden = score === 0;
+      if (score) shown++;
+    });
+    // With a search term, best title matches first; otherwise keep the catalog order.
+    if (q) scored.filter(s => s.score).sort((a, b) => b.score - a.score || a.i - b.i)
+      .forEach(({ c }) => grid.appendChild(c.card));
+    else cards.forEach(c => grid.appendChild(c.card));
+    pillBox.querySelectorAll('.pill').forEach(p => p.setAttribute('aria-pressed', p.dataset.category === activeCategory));
+    countEl.textContent = (q || activeCategory !== 'All') ? `${shown} of ${BOOKS.length} books` : `${BOOKS.length} books`;
+    noResults.hidden = shown !== 0;
+  }
+
+  searchBox.addEventListener('input', render);
+  render();
 </script>
 
 </body>

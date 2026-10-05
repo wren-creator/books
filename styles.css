@@ -226,3 +226,53 @@ footer {
 .status-line a:hover { color: var(--accent); }
 .status-line .sep { opacity: 0.4; margin: 0 0.5em; }
 .status-ready { color: var(--accent); }
+
+
+/* ---------- search, filter pills, badges ---------- */
+.catalog-controls { margin: 0 0 1.5rem; }
+.search {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--bg-panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+.search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.pill {
+  padding: 0.35rem 0.8rem;
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.pill:hover { color: var(--text); border-color: var(--accent); }
+.pill[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.result-count { margin: 0.8rem 0 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim); }
+.no-results { font-family: var(--font-mono); color: var(--text-dim); }
+.book-card[hidden], .no-results[hidden] { display: none; }
+.cover-wrap { position: relative; }
+.badge-new, .badge-bundle {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--bg);
+}
+.badge-bundle { background: var(--bg-panel-2); color: var(--accent-soft); border: 1px solid var(--accent); }
+.badge-new + .badge-bundle { top: 2rem; }
+.book-card.bundle { border-color: var(--accent); }
