@@ -1,0 +1,6 @@
+title: "Kinetic Code: The Architecture of Industrial Cyber Warfare and Critical Infrastructure Defense"
+summary: "Most industrial security writing stops at the packet. This book starts there and keeps going, into the PLC scan cycle, the process image, the 4-20 mA loop, and the physical failure an attacker is actually buying, then covers the engineering that makes each attack fail. Written from the MCC room by a Master Electrician who has wired, programmed, and troubleshot the Siemens and Allen-Bradley controllers it takes apart. Seventeen chapters in four parts: the incident history from Stuxnet to Volt Typhoon, how PLCs and their insecure-by-design protocols really work, the MITRE ATT&CK for ICS offensive matrix with lab-only proof-of-concept code, and defense with Purdue, IEC 62443, hardware isolation, passive monitoring, and out-of-band recovery. Every technique comes from a public incident and is paired with its physical consequence and its countermeasure. Companion to the Cross Creek 101 training range. 111 pages."
+price: "$14.99"
+formats: [EPUB]
+gumroad_url: "https://britley.gumroad.com/l/bipkbx"
+cover: "kinetic-code.jpg"
